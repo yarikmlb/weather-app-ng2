@@ -9,14 +9,14 @@ export class WeatherService {
   constructor(private _http: Http, private _languagesService: LanguagesService) {}
 
   getCurrentWeather(cityName: string) {
-    return this._http.get('https://api.openweathermap.org/data/2.5/weather?' +
+    return this._http.get('http://api.openweathermap.org/data/2.5/weather?' +
       'appid=dba7f76d026ee86d564d2bc71b790d20&units=metric&q=' + cityName).subscribe((data) => {
       this.currentWeather = data.json();
     });
   }
 
   getWeatherByCoord(lat: number, lon: number) {
-    return this._http.get('https://api.openweathermap.org/data/2.5/weather?' +
+    return this._http.get('http://api.openweathermap.org/data/2.5/weather?' +
       'appid=dba7f76d026ee86d564d2bc71b790d20&units=metric&lat=' + lat + '&lon=' + lon + '&lang=' + this._languagesService.getLanguages());
   }
 }
