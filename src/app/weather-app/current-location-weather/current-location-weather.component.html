@@ -1,0 +1,31 @@
+<div class="location" *ngIf="weather.name">
+  <div class="location__name">
+    {{weather.name}}, {{weather.sys.country}}
+  </div>
+  <div class="location__temp">
+    Temperature: {{weather.main.temp}}
+  </div>
+  <div class="location__humidity">
+    Humidity: {{weather.main.humidity + ' %'}}
+  </div>
+  <div class="location__pressure">
+    Pressure: {{weather.main.pressure | pressureTransform}} <span>mmHg</span>
+  </div>
+  <div class="location__wind">
+    Wind Speed: {{weather.wind.speed}} <span>meter/sec</span>
+    Wind Direction: {{weather.wind.deg | windLine}}
+  </div>
+  <div class="location__sky">
+    Sky: {{weather.weather[0].description}}
+    <img src="{{skyImage}}" alt="">
+  </div>
+  <div class="location__sunset">
+    <h6>Sunrise Time: {{sunrise * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</h6>
+  </div>
+  <div class="location__sunset">
+    <h6>Sunset Time: {{sunset * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</h6>
+  </div>
+  <div class="location__update">
+    <p>Last Update: {{weather.dt * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+  </div>
+</div>

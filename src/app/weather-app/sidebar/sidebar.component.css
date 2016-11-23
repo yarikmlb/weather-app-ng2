@@ -1,0 +1,10 @@
+.sidebar {
+  text-decoration: none;
+  list-style: none;
+}
+.link_active {
+  color: red;
+}
+.sidebar-weather {
+  cursor: pointer;
+}
