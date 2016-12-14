@@ -28,7 +28,6 @@ export class CurrentLocationWeatherComponent {
         (data) => { this.weather = data.json(); },
         (error) => { error.json(); },
         () => {
-          console.log(this.weather);
           this.country = this.weather.sys.country;
           this.sunset = this.weather.sys.sunset;
           this.sunrise = this.weather.sys.sunrise;

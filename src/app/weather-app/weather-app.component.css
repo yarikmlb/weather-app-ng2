@@ -1,4 +1,19 @@
+.wrapper {
+  position: relative;
+  margin: 0;
+}
 .header,
 .weather {
-  margin: 0;
+  margin: 20px;
+}
+.current-location {
+  position: absolute;
+  right: 20%;
+  top: 20px;
+}
+.weather-content {
+  border: 1px solid gainsboro;
+}
+.weather-navigation {
+  padding: 0;
 }

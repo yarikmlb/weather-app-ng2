@@ -1,0 +1,17 @@
+.location {
+  text-align: center;
+}
+.location__title {
+  padding: 20px 0;
+  font-size: 16px;
+  color: gainsboro;
+}
+.location-is-none {
+  text-align: center;
+}
+.location-is-none__title {
+  padding: 20px 0;
+  font-size: 16px;
+  color: gainsboro;
+}
+

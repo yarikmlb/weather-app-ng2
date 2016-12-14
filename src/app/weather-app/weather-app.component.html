@@ -1,16 +1,18 @@
-<div class="row header">
-  <div class="col-sm-6">
+<div class="wrapper row">
+  <div class="col-sm-6 header">
     <weather-header-search></weather-header-search>
   </div>
-  <div class="col-sm-6">
+  <div class="current-location">
     <weather-current-location></weather-current-location>
   </div>
-</div>
-<div class="row weather">
-  <div class="weather-navigation col-sm-4">
-    <weather-sidebar></weather-sidebar>
-  </div>
-  <div class="weather-content col-sm-8">
-    <router-outlet></router-outlet>
+  <div class="col-sm-6">
+    <div class="row weather">
+      <div class="weather-navigation col-sm-12">
+        <weather-sidebar></weather-sidebar>
+      </div>
+      <div class="weather-content col-sm-12">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
   </div>
 </div>

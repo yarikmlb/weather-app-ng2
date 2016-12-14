@@ -7,12 +7,10 @@ import { WeatherService } from '../../../shared/weather.service';
   styleUrls: ['current-weather.component.css']
 })
 export class CurrentWeatherComponent {
-  private currentWeather: {} = {};
 
   constructor(private _weatherService: WeatherService) {}
 
   getWeather() {
-    this.currentWeather = this._weatherService.currentWeather;
-    return this.currentWeather;
+    return this._weatherService.currentWeather;
   }
 }

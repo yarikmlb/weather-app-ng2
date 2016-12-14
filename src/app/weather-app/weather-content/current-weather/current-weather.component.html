@@ -1,3 +1,30 @@
 <div *ngIf="getWeather().id">
-  <p>{{currentWeather.name}}</p>
+  <div class="location">
+    <div class="location__name">
+      {{getWeather().name}}, {{getWeather().sys.country}}
+    </div>
+    <div class="location__temp">
+      <span class="line-title">Temperature:</span> {{getWeather().main.temp}}
+    </div>
+    <div class="location__humidity">
+      <span class="line-title">Humidity:</span> {{getWeather().main.humidity + ' %'}}
+    </div>
+    <div class="location__pressure">
+      <span class="line-title">Pressure:</span> {{getWeather().main.pressure | pressureTransform}} <span>mmHg</span>
+    </div>
+    <div class="location__wind">
+      <div><span class="line-title">Wind Speed:</span> {{getWeather().wind.speed}} <span>meter/sec</span></div>
+      <div><span class="line-title">Wind Direction:</span> {{getWeather().wind.deg | windLine}}</div>
+    </div>
+    <div class="location__sky">
+      <span class="line-title">Sky:</span> {{getWeather().weather[0].description}}
+      <img class="sky-image" src="https:/openweathermap.org/img/w/{{getWeather().weather[0].icon}}.png" alt="">
+    </div>
+  </div>
+</div>
+<div *ngIf="!getWeather().id">
+  <div class="location-is-none">
+    <p class="location-is-none__title">Find Your city</p>
+    <img src="https://cdn0.iconfinder.com/data/icons/elpis/144/SEO-128.png" alt="">
+  </div>
 </div>

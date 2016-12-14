@@ -1,31 +1,34 @@
+<h1>Weather in Your location</h1>
 <div class="location" *ngIf="weather.name">
   <div class="location__name">
-    {{weather.name}}, {{weather.sys.country}}
+    <span class="line-title">Location name:</span> {{weather.name}}, {{weather.sys.country}}
   </div>
   <div class="location__temp">
-    Temperature: {{weather.main.temp}}
+    <span class="line-title">Temperature:</span> {{weather.main.temp}} &ordm;C
   </div>
   <div class="location__humidity">
-    Humidity: {{weather.main.humidity + ' %'}}
+    <span class="line-title">Humidity:</span> {{weather.main.humidity + ' %'}}
   </div>
   <div class="location__pressure">
-    Pressure: {{weather.main.pressure | pressureTransform}} <span>mmHg</span>
+    <span class="line-title">Pressure:</span> {{weather.main.pressure | pressureTransform}} <span>mmHg</span>
   </div>
-  <div class="location__wind">
-    Wind Speed: {{weather.wind.speed}} <span>meter/sec</span>
-    Wind Direction: {{weather.wind.deg | windLine}}
+  <div class="location__wind-speed">
+    <span class="line-title">Wind Speed:</span> {{weather.wind.speed}} <span>meter/sec</span>
+  </div>
+  <div class="location__wind-direction">
+    <span class="line-title">Wind Direction:</span> {{weather.wind.deg | windLine}}
   </div>
   <div class="location__sky">
-    Sky: {{weather.weather[0].description}}
-    <img src="{{skyImage}}" alt="">
+    <span class="line-title">Sky:</span> {{weather.weather[0].description}}
+    <img class="sky-image" src="{{skyImage}}" alt="">
+  </div>
+  <div class="location__sunrise">
+    <span class="line-title">Sunrise Time:</span> {{sunrise * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}
   </div>
   <div class="location__sunset">
-    <h6>Sunrise Time: {{sunrise * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</h6>
-  </div>
-  <div class="location__sunset">
-    <h6>Sunset Time: {{sunset * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</h6>
+    <span class="line-title">Sunset Time:</span> {{sunset * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}
   </div>
   <div class="location__update">
-    <p>Last Update: {{weather.dt * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+    <span class="line-title">Last Update:</span> {{weather.dt * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}
   </div>
 </div>
