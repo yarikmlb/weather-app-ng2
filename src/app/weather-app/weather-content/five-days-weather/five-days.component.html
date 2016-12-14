@@ -1,6 +1,7 @@
 <div *ngIf="_fiveDaysWeather.city">{{_fiveDaysWeather.city.name}}, {{_fiveDaysWeather.city.country}}
   <div *ngFor="let list of _lists">
-    {{list.dt_txt}}
+    <div>{{list.dt_txt | date:'dd MMM'}}</div>
+    <div>{{list.main.temp}}</div>
   </div>
 </div>
 <div *ngIf="!_fiveDaysWeather.city">
