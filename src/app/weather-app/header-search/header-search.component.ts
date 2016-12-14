@@ -11,6 +11,7 @@ export class HeaderSearchComponent {
   constructor( private _currentWeatherService: WeatherService) {}
 
   setCurrentCity(cityName) {
+    this._currentWeatherService.getFiveDaysWeather(cityName);
     this._currentWeatherService.getCurrentWeather(cityName);
   }
 }

@@ -1,10 +1,10 @@
 <div *ngIf="getWeather().id">
   <div class="location">
     <div class="location__name">
-      {{getWeather().name}}, {{getWeather().sys.country}}
+      <h3>Weather in {{getWeather().name}}, {{getWeather().sys.country}}</h3>
     </div>
     <div class="location__temp">
-      <span class="line-title">Temperature:</span> {{getWeather().main.temp}}
+      <span class="line-title">Temperature:</span> {{getWeather().main.temp}} &ordm;C
     </div>
     <div class="location__humidity">
       <span class="line-title">Humidity:</span> {{getWeather().main.humidity + ' %'}}
@@ -12,15 +12,27 @@
     <div class="location__pressure">
       <span class="line-title">Pressure:</span> {{getWeather().main.pressure | pressureTransform}} <span>mmHg</span>
     </div>
-    <div class="location__wind">
-      <div><span class="line-title">Wind Speed:</span> {{getWeather().wind.speed}} <span>meter/sec</span></div>
-      <div><span class="line-title">Wind Direction:</span> {{getWeather().wind.deg | windLine}}</div>
+    <div class="location__wind-speed">
+      <span class="line-title">Wind Speed:</span> {{getWeather().wind.speed}} <span>meter/sec</span>
+    </div>
+    <div class="location__wind-direction">
+      <span class="line-title">Wind Direction:</span> {{getWeather().wind.deg | windLine}}
     </div>
     <div class="location__sky">
       <span class="line-title">Sky:</span> {{getWeather().weather[0].description}}
       <img class="sky-image" src="https:/openweathermap.org/img/w/{{getWeather().weather[0].icon}}.png" alt="">
     </div>
+    <div class="location__sunrise">
+      <span class="line-title">Sunrise Time:</span> {{getWeather().sys.sunrise * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}
+    </div>
+    <div class="location__sunset">
+      <span class="line-title">Sunset Time:</span> {{getWeather().sys.sunset * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}
+    </div>
+    <div class="location__update">
+      <span class="line-title">Last Update:</span> {{getWeather().dt * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}
+    </div>
   </div>
+
 </div>
 <div *ngIf="!getWeather().id">
   <div class="location-is-none">

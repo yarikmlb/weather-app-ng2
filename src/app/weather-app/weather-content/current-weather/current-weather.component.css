@@ -1,6 +1,3 @@
-.location {
-  text-align: center;
-}
 .location__title {
   padding: 20px 0;
   font-size: 16px;
@@ -13,5 +10,74 @@
   padding: 20px 0;
   font-size: 16px;
   color: gainsboro;
+}
+.sky-image {
+  position: absolute;
+  top: -10px;
+}
+.line-title {
+  color: #fff;
+  padding-right: 5px;
+}
+.location__name,
+.location__temp,
+.location__sky,
+.location__humidity,
+.location__pressure,
+.location__wind-speed,
+.location__wind-direction,
+.location__sunset,
+.location__sunrise,
+.location__update {
+  position: relative;
+  padding: 10px 10px 10px 0;
+}
+.location__name:after,
+.location__temp:after,
+.location__humidity:after,
+.location__pressure:after,
+.location__wind-speed:after,
+.location__wind-direction:after,
+.location__sunset:after,
+.location__sunrise:after,
+.location__update:after {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 36px;
+  display: inline-block;
+  height: 36px;
+  background-size: cover;
+  margin-left: 5px;
+}
+.location__name:after {
+  top: 20px;
+  left: 38%;
+  background-image: url('https://cdn4.iconfinder.com/data/icons/Upojenie_by_SoundForge/Icons/Maps.png');
+}
+.location__temp:after {
+  background-image: url('https://cdn0.iconfinder.com/data/icons/fatcow/32x32/temperature_5.png');
+}
+.location__humidity:after {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/weather-flat-icons-2/320/7-64.png');
+}
+.location__pressure:after {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/freecns-cumulus/32/519790-100_Pressure_Reading-64.png');
+}
+.location__wind-speed:after {
+  background-image: url('https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Wind-Wheel-64.png');
+}
+.location__wind-direction:after {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/thesquid-ink-40-free-flat-icon-pack/68/wind-sock-64.png');
+}
+.location__sunrise:after {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-07-128.png');
+  left: 34%;
+}
+.location__sunset:after {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-15-128.png');
+}
+.location__update:after {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/128/Update.png');
 }
 

@@ -1,3 +1,11 @@
-<p>
-  five-days works!
-</p>
+<div *ngIf="_fiveDaysWeather.city">{{_fiveDaysWeather.city.name}}, {{_fiveDaysWeather.city.country}}
+  <div *ngFor="let list of _lists">
+    {{list.dt_txt}}
+  </div>
+</div>
+<div *ngIf="!_fiveDaysWeather.city">
+  <div class="location-is-none">
+    <p class="location-is-none__title">Find Your city</p>
+    <img src="https://cdn0.iconfinder.com/data/icons/elpis/144/SEO-128.png" alt="">
+  </div>
+</div>

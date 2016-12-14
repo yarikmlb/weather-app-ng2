@@ -9,52 +9,52 @@ export class WindLinePipe implements PipeTransform {
     let windDirection = '';
     switch (true) {
       case (value > 11.25 && value <= 33.75):
-        windDirection = 'NNE';
+        windDirection = 'North-northeast';
         break;
       case (value > 33.75 && value <= 56.25):
-        windDirection = 'NE';
+        windDirection = 'Northeast';
         break;
       case (value > 56.25 && value <= 78.75):
-        windDirection = 'ENE';
+        windDirection = 'East-northeast	';
         break;
       case (value > 78.75 && value <= 101.25):
-        windDirection = 'E';
+        windDirection = 'East';
         break;
       case (value > 101.25 && value <= 123.75):
-        windDirection = 'ESE';
+        windDirection = 'East-southeast';
         break;
       case (value > 123.75 && value <= 146.25):
-        windDirection = 'SE';
+        windDirection = 'Southeast';
         break;
       case (value > 146.25 && value <= 168.75):
-        windDirection = 'SSE';
+        windDirection = 'South-southeast';
         break;
       case (value > 168.75 && value <= 191.25):
-        windDirection = 'S';
+        windDirection = 'South';
         break;
       case (value > 191.25 && value <= 213.75):
-        windDirection = 'SSW';
+        windDirection = 'South-southwest';
         break;
       case (value > 213.75 && value <= 236.25):
-        windDirection = 'SW';
+        windDirection = 'Southwest';
         break;
       case (value > 236.25 && value <= 258.75):
-        windDirection = 'WSW';
+        windDirection = 'West-southwest';
         break;
       case (value > 258.75 && value <= 281.25):
-        windDirection = 'W';
+        windDirection = 'West';
         break;
       case (value > 281.25 && value <= 303.75):
-        windDirection = 'WNW';
+        windDirection = 'West-northwest';
         break;
       case (value > 303.75 && value <= 326.25):
-        windDirection = 'NW';
+        windDirection = 'Northwest';
         break;
       case (value > 326.25 && value <= 348.75):
-        windDirection = 'NNW';
+        windDirection = 'North-northwest';
         break;
       case (value > 348.75 || value <= 11.25):
-        windDirection = 'N';
+        windDirection = 'North';
         break;
       default:
         windDirection = 'Breeze'
